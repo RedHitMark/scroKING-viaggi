@@ -1,0 +1,45 @@
+<div>
+  <p><b>Nuovo Cliente</b></p>
+  <form (ngSubmit)="newCliente()" #clienteForm="ngForm">
+    <div>
+      <label for="codFiscale">codice Fiscale</label>
+      <input type="text" id="codFiscale" required [(ngModel)]="cliente.codFiscale" name="codFiscale">
+    </div>
+
+    <div>
+      <label for="nomeCliente">nomeCliente</label>
+      <input type="text" id="nomeCliente" required [(ngModel)]="cliente.nomeCliente" name="nomeCliente">
+    </div>
+
+    <div>
+      <label for="cognomeCliente">cognomeCliente</label>
+      <input type="text" id="cognomeCliente" required [(ngModel)]="cliente.cognomeCliente" name="cognomeCliente">
+    </div>
+
+    <div>
+      <label for="sesso">sesso</label>
+      <select id="sesso" required [(ngModel)]="cliente.sesso" name="sesso">
+        <option value="M">Maschio</option>
+        <option value="F">Femmina</option>
+        <option value="M">3 Volte al giorno</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="telefono">telefono</label>
+      <input type="text" id="telefono" required [(ngModel)]="cliente.telefono" name="telefono">
+    </div>
+
+    <div>
+      <label for="indirizzo">indirizzo</label>
+      <input type="text" id="indirizzo" required [(ngModel)]="cliente.indirizzo" name="indirizzo">
+    </div>
+
+    <button type="submit" [disabled]="clienteForm.invalid">Inserisci nuovo cliente</button>
+    <button type="reset">Clear</button>
+    <br>
+    <br>
+
+    <button routerLink="/clienti">Indietro</button>
+  </form>
+</div>

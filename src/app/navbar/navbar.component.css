@@ -1,0 +1,30 @@
+.navbar {
+    background-color: black;
+
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navbar img {
+    margin: auto;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bar a{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+.bar a:hover {
+    color: brown;
+}

@@ -1,0 +1,33 @@
+<div *ngIf="clienti">
+  <div class="buttons">
+    <button routerLink="cliente-form">Nuovo Cliente</button>
+  </div>
+
+  <div class="searchBar">
+    <input id="search"type="text" #search (keyup)="filtraClienti(search.value)"/>
+  </div>
+
+  <div class="clientiTable">
+    <table>
+      <tr>
+        <th>Codice Fiscale</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Sesso</th>
+        <th>Telefono</th>
+        <th>Indirizzo</th>
+      </tr>
+
+      <tr *ngFor="let cliente of clientiFiltrati" >
+        <td>{{cliente.codFiscale}}</td>
+        <td>{{cliente.nomeCliente}}</td>
+        <td>{{cliente.cognomeCliente}}</td>
+        <td>{{cliente.sesso}}</td>
+        <td>{{cliente.telefono}}</td>
+        <td>{{cliente.indirizzo}}</td>
+        <td> <button routerLink="cliente-detail/{{cliente.codFiscale}}">Visualizza</button></td>
+        <td> <button (click)="deleteCliente(cliente.codFiscale)">Elimina</button></td>
+      </tr>
+    </table>
+  </div>
+</div>

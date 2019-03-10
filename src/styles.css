@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+    background-image: url("./assets/img/sfondo.jpg");
+    background-position: center;
+    opacity: 90%;
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+

@@ -1,0 +1,38 @@
+<div *ngIf="viaggi">
+    <div class="buttons">
+        <button routerLink="viaggio-form">Nuovo Viaggio</button>
+    </div>
+
+    <div class="searchBar">
+        <label for="search">Cerca un viaggio</label>
+        <input id="search"type="text" #search (keyup)="filtraViaggi(search.value)"/>
+    </div>
+
+    <div class="viaggiTable">
+        <table>
+            <tr>
+                <th>Codice Viaggio</th>
+                <th>Tipologia</th>
+                <th>Partenza</th>
+                <th>Destinazione</th>
+                <th>Costo</th>
+                <th>Data Partenza</th>
+                <th>Data Rientro</th>
+                <th></th>
+                <th></th>
+            </tr>
+            <div class="viaggiSpazio"></div>
+            <tr *ngFor="let viaggio of viaggiFiltrati" >
+                <td>{{viaggio.codViaggio}}</td>
+                <td>{{viaggio.tipoViaggio}}</td>
+                <td>{{viaggio.luogoPartenza}}</td>
+                <td>{{viaggio.luogoDestinazione}}</td>
+                <td>{{viaggio.costoViaggio}}</td>
+                <td>{{viaggio.dataInizioViaggio}}</td>
+                <td>{{viaggio.dataFineViaggio}}</td>
+                <td> <button routerLink="viaggio-detail/{{viaggio.codViaggio}}">Visulizza</button></td>
+                <td> <button (click)="deleteViaggio(viaggio.codViaggio)">Elimina</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

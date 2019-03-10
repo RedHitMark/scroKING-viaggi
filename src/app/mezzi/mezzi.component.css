@@ -1,0 +1,48 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buttons button{
+    border-radius: 10px;
+    flex-basis: 300px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.searchBar input {
+    flex-basis: 800px;
+    border-radius: 10px;
+}
+
+.mezziTable {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    background-color: rgba(13,13,13,0.43);
+    margin-bottom: 50px;
+}
+
+.mezziTable table{
+    text-align: center;
+}
+
+.mezziTable td {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.mezziTable th {
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+

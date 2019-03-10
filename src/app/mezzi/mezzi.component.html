@@ -1,0 +1,27 @@
+<div *ngIf="mezzi">
+  <div class="buttons">
+    <button routerLink="mezzo-form">Nuovo Mezzo</button>
+  </div>
+
+  <div class="searchBar">
+    <input id="search"type="text" #search (keyup)="filtraMezzi(search.value)"/>
+  </div>
+
+  <div class="mezziTable">
+    <table>
+      <tr>
+        <th>Codice Mezzo</th>
+        <th>Descrizione</th>
+        <th>Capienza</th>
+      </tr>
+
+      <tr *ngFor="let mezzo of mezziFiltrati" >
+        <td>{{mezzo.codMezzo}}</td>
+        <td>{{mezzo.descrizioneMezzo}}</td>
+        <td>{{mezzo.capienzaMezzo}}</td>
+        <td> <button routerLink="mezzo-detail/{{mezzo.codMezzo}}">Visulizza</button></td>
+        <td> <button (click)="deleteMezzo(mezzo.codMezzo)">Elimina</button></td>
+      </tr>
+    </table>
+  </div>
+</div>
