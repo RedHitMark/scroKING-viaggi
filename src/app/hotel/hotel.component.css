@@ -1,0 +1,46 @@
+.buttons {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.buttons button{
+    border-radius: 10px;
+    flex-basis: 300px;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.searchBar input {
+    flex-basis: 800px;
+    border-radius: 10px;
+}
+
+.hotelTable {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    background-color: rgba(13,13,13,0.43);
+    margin-bottom: 50px;
+}
+
+.hotelTable table{
+    text-align: center;
+}
+
+.hotelTable td {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.hotelTable th {
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+}

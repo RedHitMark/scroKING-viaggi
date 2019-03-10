@@ -1,0 +1,26 @@
+<div>
+  <p><b>Nuovo Mezzo</b></p>
+  <form (ngSubmit)="newMezzo()" #mezzoForm="ngForm">
+    <div>
+      <label for="codMezzo">Cod Mezzo</label>
+      <input type="text" id="codMezzo" required [(ngModel)]="mezzo.codMezzo" name="codMezzo">
+    </div>
+
+    <div>
+      <label for="descrizioneMezzo">descrizione Mezzo</label>
+      <input type="text" id="descrizioneMezzo" required [(ngModel)]="mezzo.descrizioneMezzo" name="descrizioneMezzo">
+    </div>
+
+    <div>
+      <label for="capienzaMezzo">luogo Partenza</label>
+      <input type="text" id="capienzaMezzo" required [(ngModel)]="mezzo.capienzaMezzo" name="capienzaMezzo">
+    </div>
+
+    <button type="submit" [disabled]="mezzoForm.invalid">Inserisci nuovo mezzo</button>
+    <button type="reset">Clear</button>
+    <br>
+    <br>
+
+    <button routerLink="/mezzi">Indietro</button>
+  </form>
+</div>

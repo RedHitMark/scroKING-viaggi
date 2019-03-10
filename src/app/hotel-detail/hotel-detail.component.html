@@ -1,0 +1,113 @@
+<div *ngIf="hotel">
+  <div class="infoHotel">
+    <p style="margin-bottom: -20px"><b>Codice Albergo</b>: {{hotel.codAlbergo}}</p>
+    <table>
+      <tr>
+        <td style="text-align: right"><b>Denominazione</b>: {{hotel.denominazione}}</td>
+        <td style="text-align: left"><b>Stanze</b>: {{hotel.stanzeDisponibili}}</td>
+      </tr>
+    </table>
+    <b style="margin-bottom: -20px">Recapiti:</b>
+    <p style="margin-bottom: -20px" *ngFor="let telefono of hotel.telefoni"> {{telefono.numero}}</p>
+    <br>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Soggiorni:</b>
+    <table>
+      <tr>
+        <th>Viaggio</th>
+        <th>Check-in</th>
+        <th>Check-out</th>
+        <th>Stanze</th>
+      </tr>
+      <tr *ngFor="let soggiorno of hotel.soggiorni">
+        <td>{{soggiorno.viaggio}}</td>
+        <td>{{soggiorno.dataInizioSoggiorno}}</td>
+        <td>{{soggiorno.dataFineSoggiorno}}</td>
+        <td>{{soggiorno.numStanze}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Prenota un soggiorno</button>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Dirigenti:</b>
+    <table>
+      <tr>
+        <th>Contratto</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data Nascita</th>
+        <th>Retribuzione annuale</th>
+        <th>Inizio contratto</th>
+        <th>Qualifica</th>
+      </tr>
+      <tr *ngFor="let dipendente of hotel.dipendentiFissiDirigenti">
+        <td>{{dipendente.numContratto}}</td>
+        <td>{{dipendente.nomeDipendente}}</td>
+        <td>{{dipendente.cognomeDipendente}}</td>
+        <td>{{dipendente.dataNascita}}</td>
+        <td>{{dipendente.retribuzione}}</td>
+        <td>{{dipendente.dataInizioContratto}}</td>
+        <td>{{dipendente.qualifica}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Diventa un dirigente</button>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Dipendenti fissi:</b>
+    <table>
+      <tr>
+        <th>Contratto</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data Nascita</th>
+        <th>Retribuzione annuale</th>
+        <th>Inizio contratto</th>
+        <th>Qualifica</th>
+      </tr>
+      <tr *ngFor="let dipendente of hotel.dipendentiFissi">
+        <td>{{dipendente.numContratto}}</td>
+        <td>{{dipendente.nomeDipendente}}</td>
+        <td>{{dipendente.cognomeDipendente}}</td>
+        <td>{{dipendente.dataNascita}}</td>
+        <td>{{dipendente.retribuzione}}</td>
+        <td>{{dipendente.dataInizioContratto}}</td>
+        <td>{{dipendente.qualifica}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Presenta il tuo curriculum</button>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Dipendenti stagionali:</b>
+    <table>
+      <tr>
+        <th>Contratto</th>
+        <th>Nome</th>
+        <th>Cognome</th>
+        <th>Data Nascita</th>
+        <th>Retribuzione giornaliera</th>
+        <th>Inizio contratto</th>
+        <th>Fine contratto</th>
+      </tr>
+      <tr *ngFor="let dipendente of hotel.dipendentiStagionali">
+        <td>{{dipendente.numContratto}}</td>
+        <td>{{dipendente.nomeDipendente}}</td>
+        <td>{{dipendente.cognomeDipendente}}</td>
+        <td>{{dipendente.dataNascita}}</td>
+        <td>{{dipendente.retribuzione}}</td>
+        <td>{{dipendente.dataInizioContratto}}</td>
+        <td>{{dipendente.dataFineContratto}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Lavora con noi</button>
+  </div>
+
+</div>

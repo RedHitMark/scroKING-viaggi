@@ -1,0 +1,47 @@
+<div>
+    <p><b>Nuovo Viaggio</b></p>
+    <form (ngSubmit)="newViaggio()" #viaggioForm="ngForm">
+        <div>
+            <label for="codViaggio">Cod Viaggio</label>
+            <input type="number" id="codViaggio" required [(ngModel)]="viaggio.codViaggio" name="codViaggio">
+        </div>
+
+        <div>
+            <label for="tipoViaggio">tipo Viaggio</label>
+            <input type="text" id="tipoViaggio" required [(ngModel)]="viaggio.tipoViaggio" name="tipoViaggio">
+        </div>
+
+        <div>
+            <label for="luogoPartenza">luogo Partenza</label>
+            <input type="text" id="luogoPartenza" required [(ngModel)]="viaggio.luogoPartenza" name="luogoPartenza">
+        </div>
+
+        <div>
+            <label for="luogoDestinazione">luogo Destinazione</label>
+            <input type="text" id="luogoDestinazione" required [(ngModel)]="viaggio.luogoDestinazione"  name="luogoDestinazione">
+        </div>
+
+        <div>
+            <label for="costoViaggio">costo Viaggio</label>
+            <input type="number" id="costoViaggio" required [(ngModel)]="viaggio.costoViaggio" name="costoViaggio">
+        </div>
+
+        <div>
+            <label for="dataInizioViaggio">data Inizio Viaggio</label>
+            <input type="date" id="dataInizioViaggio" required [(ngModel)]="viaggio.dataInizioViaggio" name="dataInizioViaggio">
+        </div>
+
+        <div>
+            <label for="dataFineViaggio">data Fine Viaggio</label>
+            <input type="date" id="dataFineViaggio" required [(ngModel)]="viaggio.dataFineViaggio" name="dataFineViaggio">
+        </div>
+
+        <button type="submit" [disabled]="viaggioForm.invalid">Inserisci nuovo viaggio</button>
+        <button type="reset">Clear</button>
+
+        <br>
+        <br>
+
+        <button routerLink="/viaggi">Indietro</button>
+    </form>
+</div>

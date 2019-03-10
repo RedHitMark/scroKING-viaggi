@@ -1,0 +1,30 @@
+<div *ngIf="mezzo">
+  <div class="infoMezzo">
+    <p style="margin-bottom: -20px"><b>Codice Mezzo</b>: {{mezzo.codMezzo}}</p>
+    <table>
+      <tr>
+        <td style="text-align: right"><b>Nome</b>: {{mezzo.descrizioneMezzo}}</td>
+        <td style="text-align: left"><b>Telefono</b>: {{mezzo.capienzaMezzo}}</td>
+      </tr>
+    </table>
+
+    <div *ngIf="mezzo.viaggio" style="font-size: 0.75em">
+      <p style="font-size: 1.2em; text-align:center; margin-bottom: -20px"><b>Mezzo Affittato</b></p>
+      <table>
+        <tr>
+          <td style="text-align: right"><b>Viaggio</b>: {{mezzo.viaggio}}</td>
+          <td style="text-align: left"><b>Costo Affitto</b>: {{mezzo.costoAffitto}}</td>
+        </tr>
+        <tr>
+          <td style="text-align: right"><b>Inizio Affitto</b>: {{mezzo.dataInizioAffitto}}</td>
+          <td style="text-align: left"><b>Fine Affitto</b>: {{mezzo.dataFineAffitto}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <div *ngIf="!mezzo.viaggio">
+      <button>Affitta questo mezzo</button>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,81 @@
+<div *ngIf="viaggio">
+  <div class="infoViaggio">
+    <table>
+      <tr>
+        <td style="text-align: right"><b>Codice Viaggio</b>: {{viaggio.codViaggio}}</td>
+        <td style="text-align: left"><b>Costo</b>: {{viaggio.costoViaggio}}</td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><b>Partenza</b>: {{viaggio.luogoPartenza}}</td>
+        <td style="text-align: left"><b>Destinazione</b>: {{viaggio.luogoDestinazione}}</td>
+      </tr>
+      <tr>
+        <td style="text-align: right"><b>Data Partenza</b>: {{viaggio.dataInizioViaggio}}</td>
+        <td style="text-align: left"><b>Data Rientro</b>: {{viaggio.dataFineViaggio}}</td>
+      </tr>
+    </table>
+  </div>
+
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Prenotazioni:</b>
+    <table>
+      <tr>
+        <th>Cliente</th>
+        <th>Data prenotazione</th>
+        <th>Sconto</th>
+      </tr>
+      <tr *ngFor="let prenotazione of viaggio.prenotazioni">
+        <td>{{prenotazione.cliente}}</td>
+        <td>{{prenotazione.dataPrenotazione}}</td>
+        <td>{{prenotazione.pSconto}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Effettua una prenotazione</button>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Mezzi affittati:</b>
+    <table>
+      <tr>
+        <th>Codice Mezzo</th>
+        <th>Descrizione</th>
+        <th>Capienza</th>
+        <th>Costo Affitto</th>
+        <th>Inizio Affitto</th>
+        <th>Fine Affitto</th>
+      </tr>
+      <tr *ngFor="let mezzo of viaggio.mezzi">
+        <td>{{mezzo.codMezzo}}</td>
+        <td>{{mezzo.descrizioneMezzo}}</td>
+        <td>{{mezzo.capienzaMezzo}}</td>
+        <td>{{mezzo.costoAffitto}}</td>
+        <td>{{mezzo.dataInizioAffitto}}</td>
+        <td>{{mezzo.dataFineAffitto}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Affitta un mezzo</button>
+  </div>
+
+  <div class="prenotazioni">
+    <b style="font-size: 1.5em">Soggiorni:</b>
+    <table>
+      <tr>
+        <th>Codice Albergo</th>
+        <th>Stanze</th>
+        <th>Inizio Soggiorno</th>
+        <th>Fine Soggiorno</th>
+      </tr>
+      <tr *ngFor="let soggiorno of viaggio.soggiorni">
+        <td>{{soggiorno.albergo}}</td>
+        <td>{{soggiorno.numStanze}}</td>
+        <td>{{soggiorno.dataInizioSoggiorno}}</td>
+        <td>{{soggiorno.dataFineSoggiorno}}</td>
+      </tr>
+    </table>
+    <br>
+    <button>Prenota un soggiorno</button>
+  </div>
+</div>

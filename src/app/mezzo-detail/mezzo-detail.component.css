@@ -1,0 +1,50 @@
+.infoMezzo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    background-color: rgba(13, 13, 13, 0.43);
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 2em;
+}
+
+.infoMezzo table{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.infoMezzo td {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+.prenotazioni {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(13,13,13,0.43);
+    margin-bottom: 50px;
+}
+
+.prenotazioni table{
+    text-align: center;
+}
+
+.prenotazioni td {
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.prenotazioni th {
+    font-size: 1.2em;
+    padding-right: 10px;
+    padding-left: 10px;
+}

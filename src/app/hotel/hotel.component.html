@@ -1,0 +1,35 @@
+<div *ngIf="hotels">
+    <div class="buttons">
+        <button routerLink="hotel-form">Nuovo Hotel</button>
+    </div>
+
+    <div class="searchBar">
+        <input id="search"type="text" #search (keyup)="filtraHotels(search.value)"/>
+    </div>
+
+    <div class="hotelTable">
+        <table >
+            <tr>
+                <th>codAlbergo</th>
+                <th>denominazione</th>
+                <th>numStanze</th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            <tr *ngFor="let hotel of hotelsFiltrati" >
+                <td>{{hotel.codAlbergo}}</td>
+                <td>{{hotel.denominazione}}</td>
+                <td>{{hotel.stanzeDisponibili}}</td>
+                <td><button routerLink="hotel-detail/{{hotel.codAlbergo}}">Visualizza</button></td>
+                <td><button>Elimina</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+

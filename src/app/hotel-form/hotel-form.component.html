@@ -1,0 +1,29 @@
+<div>
+  <p><b>Nuovo Hotel</b></p>
+  <form (ngSubmit)="newHotel()" #hotelForm="ngForm">
+    <div>
+      <label for="codAlbergo">Cod Albergo</label>
+      <input type="number" id="codAlbergo" required [(ngModel)]="hotel.codAlbergo" name="codAlbergo">
+    </div>
+
+    <div>
+      <label for="denominazione">denominazione</label>
+      <input type="text" id="denominazione" required [(ngModel)]="hotel.denominazione" name="denominazione">
+    </div>
+
+    <div>
+      <label for="stanzeDisponibili">stanze Disponibili</label>
+      <input type="text" id="stanzeDisponibili" required [(ngModel)]="hotel.stanzeDisponibili" name="stanzeDisponibili">
+    </div>
+
+
+
+    <button type="submit" [disabled]="hotelForm.invalid">Inserisci nuovo hotel</button>
+    <button type="reset">Clear</button>
+
+    <br>
+    <br>
+
+    <button routerLink="/hotel">Indietro</button>
+  </form>
+</div>
